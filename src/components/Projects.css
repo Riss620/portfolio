@@ -1,0 +1,144 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    cursor: default;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--project-color), transparent);
+    border-radius: 16px 16px 0 0;
+}
+
+.project-glow {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: var(--project-color);
+    opacity: 0.04;
+    filter: blur(40px);
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+
+.project-card:hover .project-glow {
+    opacity: 0.10;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-emoji-wrapper {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.project-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.project-subtitle {
+    font-size: 0.78rem;
+    font-family: 'Fira Code', monospace;
+    color: var(--project-color);
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+.project-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.feature-item svg {
+    color: var(--project-color);
+    flex-shrink: 0;
+}
+
+.project-footer {
+    margin-top: auto;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-outcome {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+}
+
+.project-outcome svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

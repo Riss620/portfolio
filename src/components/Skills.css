@@ -1,0 +1,115 @@
+.skills-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 2.5rem 0 1.5rem;
+}
+
+.skill-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skill-tab:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    border-color: var(--border-hover);
+}
+
+.skill-tab.active {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 4px 20px var(--glow-primary);
+}
+
+.skills-content {
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Bars */
+.skills-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.skill-pct {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+    font-family: 'Fira Code', monospace;
+}
+
+.skill-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    width: var(--target-width);
+    background: var(--gradient-primary);
+    border-radius: 4px;
+    animation: growBar 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform-origin: left;
+}
+
+@keyframes growBar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--target-width);
+    }
+}
+
+/* Tags cloud */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .skills-content {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+}

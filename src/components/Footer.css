@@ -1,0 +1,129 @@
+.footer {
+    position: relative;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.footer-glow {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(108, 99, 255, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.footer-logo {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.footer-logo .logo-bracket {
+    color: var(--accent-primary);
+}
+
+.footer-logo .logo-name {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0.1rem;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 0.85rem;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a svg {
+    width: 18px;
+    height: 18px;
+}
+
+.footer-socials a:hover {
+    background: rgba(108, 99, 255, 0.15);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    transform: translateY(-3px);
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.footer-link {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: var(--accent-primary);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.footer-heart span {
+    animation: pulse-glow 2s infinite;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+    }
+}
