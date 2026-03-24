@@ -25,6 +25,8 @@ const skillCategories = [
             { name: 'Express.js', level: 80 },
             { name: 'React Native', level: 65 },
             { name: 'HTML/CSS', level: 90 },
+            { name: 'Spring', level: 70 },
+            { name: 'Spring Boot', level: 72 },
         ],
     },
     {
