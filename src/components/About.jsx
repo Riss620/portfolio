@@ -48,7 +48,14 @@ export default function About() {
                                 <span className="info-value">LPU (Since 2024)</span>
                             </div>
                         </div>
-                        <a href="mailto:rishavku620@gmail.com" className="btn-primary" style={{ alignSelf: 'flex-start' }}>
+                        <a
+                            href="https://drive.google.com/uc?export=download&id=1ln-mTtjBOLPcIYqSn5M7IEPNeVFwAmrM"
+                            download="Rishav_Kumar_Resume.pdf"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="btn-primary"
+                            style={{ alignSelf: 'flex-start' }}
+                        >
                             Download Resume
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" /></svg>
                         </a>
