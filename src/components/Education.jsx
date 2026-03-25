@@ -22,7 +22,7 @@ const education = [
     {
         degree: 'Matriculation',
         institution: 'Sundari Devi Saraswati Vidya Mandir',
-        location: 'Jharkhand',
+        location: 'Samastipur, Bihar',
         period: 'Completed',
         icon: '📚',
         tags: ['Science', 'Mathematics'],
